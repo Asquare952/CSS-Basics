@@ -1,0 +1,33 @@
+.div:hover {
+  background-color: rebeccapurple;
+  color: white;
+}
+button:active {
+  background-color: blue;
+  color: white;
+}
+p:first-child {
+  color: red;
+}
+p:last-child {
+  color: red;
+}
+h4::first-line {
+  color: green;
+}
+h5::first-letter {
+  color: yellow;
+}
+h6::before {
+  content: "1";
+}
+span::after {
+  content: "2";
+}
+::marker {
+  color: red;
+}
+span::selection {
+  background-color: black;
+  color: white;
+}
