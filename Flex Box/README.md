@@ -275,3 +275,144 @@ The `baseline` value aligns the flex items such as their baselines aligns:
 ```
 
 **Note:** the example uses different font-size to demonstrate that the items gets aligned by the text baseline
+
+## CSS Flex Items
+
+### The CSS Flex Items
+
+The direct child elements of a flex container automatically becomes flex items.
+
+**The CSS properties we use for flex items are:**
+
+- `order`
+- `flex-grow`
+- `flex-shrink`
+- `flex-basis`
+- `flex`
+- `align-self`
+
+### The order Property
+
+The order property specifies the order of the flex items inside the flex container.
+
+The first flex item in the code does not have to appear as the first item in the layout.
+
+The order value must be a number, default value is 0.
+
+### Example 
+
+The order property can change the order of the flex items:
+
+```html
+<div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+</div>
+```
+
+### The flex-grow Property
+
+The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+
+### Example 
+
+Make the third flex item grow eight times faster than the other flex items:
+
+```html
+<div class="flex-container">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
+</div>
+```
+
+### The flex-shrink Property
+
+The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items.
+
+### Example 
+
+Do not let the third flex item shrink as much as the other flex items:
+
+```html
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-shrink: 0">3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+</div>
+```
+
+### The flex-basis Property
+
+The flex-basis property specifies the initial length of a flex item.
+
+### Example 
+
+Set the initial length of the third flex item to 200 pixels:
+
+```html
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis: 200px">3</div>
+  <div>4</div>
+</div>
+```
+
+### The flex Property
+
+The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+
+### Example 
+
+Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels:
+
+```html
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex: 0 0 200px">3</div>
+  <div>4</div>
+</div>
+```
+
+### The align-self Property
+
+The align-self property specifies the alignment for the selected item inside the flexible container.
+
+The align-self property overrides the default alignment set by the container's align-items property.
+
+### Example 
+
+Align the third flex item in the middle of the container:
+
+```html
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="align-self: center">3</div>
+  <div>4</div>
+</div>
+```
+
+### Example 
+
+Align the third flex item in the middle of the container:
+
+```html
+<div class="flex-container">
+  <div>1</div>
+  <div style="align-self: flex-start">2</div>
+  <div style="align-self: flex-end">3</div>
+  <div>4</div>
+</div>
+```
